@@ -1,5 +1,7 @@
-import 'package:isar/isar.dart';
 
+import 'package:isar/isar.dart';
+part 'rating_field_model.g.dart';
+@embedded
 class RatingFieldModel {
   String? title;
   String? description;

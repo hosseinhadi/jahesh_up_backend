@@ -4,6 +4,8 @@ import 'file_model.dart';
 import 'message_reaction_model.dart';
 import 'message_seen_state_model.dart';
 
+part 'message_model.g.dart';
+
 @embedded
 class MessageModel{
   MessageModel({

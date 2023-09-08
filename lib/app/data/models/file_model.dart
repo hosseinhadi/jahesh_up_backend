@@ -1,7 +1,23 @@
 import 'package:isar/isar.dart';
 
+part 'file_model.g.dart';
+
+@embedded
 class FileModel {
-  Id? id;
+  FileModel({
+    this.id,
+    this.hash,
+    this.name,
+    this.description,
+    this.extension,
+    this.file,
+    this.addedBy,
+    this.lastEditedBy,
+    this.dateAdded,
+    this.dateModified,
+  });
+
+  int? id;
   String? hash;
   String? name;
   String? description;
@@ -11,8 +27,4 @@ class FileModel {
   int? lastEditedBy;
   DateTime? dateAdded;
   DateTime? dateModified;
-
-
-
-
 }

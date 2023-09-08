@@ -6,6 +6,8 @@ import 'message_model.dart';
 import 'message_reaction_model.dart';
 import 'message_seen_state_model.dart';
 
+part 'person_model.g.dart';
+
 @collection
 class PersonModel {
   PersonModel({
@@ -14,6 +16,8 @@ class PersonModel {
     this.lastName,
     this.shownName,
     this.phoneNumber,
+    required this.username,
+    this.password,
     this.comID,
     this.bio,
     this.picture,
@@ -26,6 +30,10 @@ class PersonModel {
   String? firstName;
   String? lastName;
   String? shownName;
+  @Index(unique: true,caseSensitive: false)
+  late String username;
+  String? password;
+  String? email;
   PhoneModel? phoneNumber;
   String? comID;
   String? bio;

@@ -1,6 +1,8 @@
 import 'package:isar/isar.dart';
 
-@embedded
+part 'session_model.g.dart';
+
+@collection
 class SessionModel {
   SessionModel({
     this.IP,
@@ -11,10 +13,10 @@ class SessionModel {
     this.id,
   });
 
-  int? id=Isar.autoIncrement;
+  Id? id;
   String? IP;
   String? deviceType;
   DateTime? startDateTime;
   DateTime? endDateTime;
-  List<int>? person;
+  int? person;
 }
