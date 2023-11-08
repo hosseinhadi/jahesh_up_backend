@@ -1,9 +1,6 @@
 import 'package:get_server/get_server.dart';
 import 'package:isar/isar.dart';
 import 'package:jahesh_up_backend/app/data/constant_values.dart';
-
-import 'app/data/models/person_model.dart';
-import 'app/data/models/space_model.dart';
 import 'app/data/services/initial_bindings.dart';
 import 'app/routes/app_pages.dart';
 

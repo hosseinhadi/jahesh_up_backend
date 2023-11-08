@@ -31,7 +31,7 @@ class LoginController extends GetxController {
   bool checkJwt(String token, String username) {
     try {
       final claimSet =
-          verifyJwtHS256Signature(token, TokenUtil.getJwtKey()!);
+      verifyJwtHS256Signature(token, TokenUtil.getJwtKey()!);
       // print(claimSet);
 
       claimSet.validate(issuer: jwtIssuer, audience: jwtAudience[0]);

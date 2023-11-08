@@ -146,3 +146,158 @@
 //         ],
 //     ],
 // ];
+
+import 'package:get_server/get_server.dart';
+import 'package:jahesh_up_database_package/jahesh_up_database_package.dart';
+
+
+final sampleSpaceModels = <SpaceModel>[
+  SpaceModel(
+    id:0,
+    owner: 0,
+    members: [0,1,2,3,4],
+    title: 'Needle Coke',
+    createdTime: DateTime.now().add(-50.days),
+    editedTime: DateTime.now().add(-49.days),
+    projects: <ProjectModel>[
+      ProjectModel(
+        title: 'Design',
+        description: 'Design of Equipments',
+        createdTime: DateTime.now().add(-50.days),
+        editedTime: DateTime.now().add(-48.days),
+        lists: <ListModel>[
+          ListModel(
+            title: 'Equipment Design',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+          ListModel(
+            title: 'Electrical Design',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+          ListModel(
+            title: 'Civil Design',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+          ListModel(
+            title: 'Piping Design',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+        ],
+      ),
+      ProjectModel(
+        title: 'Procurement',
+        description: 'Procurement of Equipments',
+        createdTime: DateTime.now().add(-50.days),
+        editedTime: DateTime.now().add(-48.days),
+        lists: <ListModel>[
+          ListModel(
+            title: 'Equipment',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+          ListModel(
+            title: 'Electrical',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+          ListModel(
+            title: 'Civil',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+          ListModel(
+            title: 'Piping',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+        ],
+      ),
+    ],
+  ),
+  SpaceModel(
+    id:1,
+    owner: 0,
+    members: [0,1,2,3,4],
+    title: 'Entekhab',
+    createdTime: DateTime.now().add(-50.days),
+    editedTime: DateTime.now().add(-49.days),
+    projects: <ProjectModel>[
+      ProjectModel(
+        title: 'Design',
+        description: 'Design of Equipments',
+        createdTime: DateTime.now().add(-50.days),
+        editedTime: DateTime.now().add(-48.days),
+        lists: <ListModel>[
+          ListModel(
+            title: 'Equipment Design',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+          ListModel(
+            title: 'Electrical Design',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+          ListModel(
+            title: 'Civil Design',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+          ListModel(
+            title: 'Piping Design',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+        ],
+      ),
+      ProjectModel(
+        title: 'Procurement',
+        description: 'Procurement of Equipments',
+        createdTime: DateTime.now().add(-50.days),
+        editedTime: DateTime.now().add(-48.days),
+        lists: <ListModel>[
+          ListModel(
+            title: 'Equipment',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+          ListModel(
+            title: 'Electrical',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+          ListModel(
+            title: 'Civil',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+          ListModel(
+            title: 'Piping',
+            createdTime: DateTime.now().add(-50.days),
+            editedTime: DateTime.now().add(-47.days),
+            statuses: ['Doing', 'In progress', 'Done'],
+          ),
+        ],
+      ),
+    ],
+  ),
+];

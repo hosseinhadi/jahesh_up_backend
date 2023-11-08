@@ -1,7 +1,7 @@
 import 'package:get_server/get_server.dart';
 import 'package:isar/isar.dart';
+import 'package:jahesh_up_database_package/jahesh_up_database_package.dart';
 
-import '../../../data/models/temp/message_model.dart';
 import '../controllers/socket_controller.dart';
 
 class SocketView extends GetView<SocketController> {
@@ -20,7 +20,7 @@ class SocketView extends GetView<SocketController> {
       });
       socket.on('sendMessage', (val) {
         final message = MessageModel.fromJson(val);
-        print('${message.sender}: \n${message.text}');
+        print('${message.senderPerson}: \n${message.text}');
       });
 
       socket.onMessage((data) {

@@ -7,6 +7,8 @@ abstract class Routes {
   static const SOCKET = '/socket';
   static const LOGIN = '/login';
   static const SIGNUP = '/signup';
+  static const SPACES = '/spaces';
+  static const COLLECTIONS = '/collections';
 }
 
 abstract class _Paths {

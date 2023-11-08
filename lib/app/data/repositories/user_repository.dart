@@ -1,25 +1,42 @@
 import 'dart:async';
-import 'dart:convert';
-
-import 'package:crypto/crypto.dart';
 import 'package:get_server/get_server.dart';
-import 'package:isar/isar.dart';
-import 'package:jahesh_up_backend/app/data/models/file_model.dart';
-import 'package:jahesh_up_backend/app/data/models/person_model.dart';
-import 'package:jahesh_up_backend/app/data/models/phone_model.dart';
+import 'package:jaguar_jwt/jaguar_jwt.dart';
+import 'package:jahesh_up_database_package/jahesh_up_database_package.dart';
 import 'package:jahesh_up_backend/app/data/providers/database_provider.dart';
 
 import '../../helper/hash_helper.dart';
+import '../../helper/jwt_helper.dart';
 
 class UserRepository extends GetxController {
   static UserRepository get to => Get.find<UserRepository>();
 
+  Future<PersonModel?> getUserByJwt(String token) async {
+    try {
+      final claimSet = verifyJwtHS256Signature(token, TokenUtil.getJwtKey()!);
+      // print(claimSet);
+
+      claimSet.validate(issuer: jwtIssuer, audience: jwtAudience[0]);
+
+      if (claimSet.jwtId != null) {
+        print(claimSet.jwtId);
+      }
+      if (claimSet.subject != null) {
+        final result = DatabaseProvider.to.database.personModels
+            .getByUsername(claimSet.subject!);
+        return result;
+      }
+    } on JwtException {
+      printError(info: 'Error on Jwt');
+    }
+    return null;
+  }
+
   FutureOr<bool> verifyUserCredentials(String username, String password) async {
-    // return false;
     final person = await DatabaseProvider.to.database.personModels
         .where()
         .usernameEqualTo(username)
         .findFirst();
+
     if (person != null && person.password == password.changeStringToHash()) {
       return true;
     } else {
