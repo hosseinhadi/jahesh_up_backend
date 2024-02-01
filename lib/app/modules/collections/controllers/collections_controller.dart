@@ -107,11 +107,12 @@ class CollectionsController extends GetxController {
   void processPayload(Map<dynamic, dynamic> payload) {}
 
   int getUserId(String jwt) {
-
+   throw UnimplementedError();
 
   }
 
   AccessLevels getAccessLevelOfUser(int userId, String collectionType, int spaceId,[int? projectId, int? listId]) {
+   throw UnimplementedError();
 
 
   }

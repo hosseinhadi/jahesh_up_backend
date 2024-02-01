@@ -70,7 +70,6 @@ class CollectionsView extends GetView<CollectionsController> {
             controller.processPayload(payload);
 
             return Obx(
-
               () {
                 if (controller.result.value == null) {
                   return WidgetEmpty();
